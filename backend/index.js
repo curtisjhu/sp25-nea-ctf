@@ -5,6 +5,8 @@ app.get('/', (req, res) => {
     res.send('<h1>hack me website home</h1>');
 });
 
+const FLAG2 = "applebee2";
+
 app.get('/two', (req, res) => {
 	const searchQuery = req.query.search;
 	function getQuery(query) {
