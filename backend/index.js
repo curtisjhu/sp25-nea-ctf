@@ -7,12 +7,13 @@ app.get('/', (req, res) => {
 
 app.get('/two', (req, res) => {
 	const searchQuery = req.query.search;
-	
-  	const results = getResults(searchQuery); // Implementation not shown
+	function getQuery(query) {
+		return query;
+	}
+  	const results = getQuery(searchQuery);
 	res.send(`
 		<h1>You searched for ${searchQuery}</h1>
 		<p>Here are the results: ${results}</p>`);
-
 });
 
 app.get('/three', (req, res) => {
