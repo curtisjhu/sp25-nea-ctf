@@ -10,8 +10,9 @@ app.get('/one', (req, res) => {
 });
 
 app.get('/two', (req, res) => {
-    res.send('<h1></h1>');
+    res.send('<h1>flag 2: toy story 3</h1>');
 });
+
 
 app.get('/vulnerable_port', (req, res) => {
     res.send('<h1></h1>');

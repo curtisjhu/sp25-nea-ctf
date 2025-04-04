@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CTF</title>
+	</head>
+    <body style="background-color: white;">
+        <h1>Flag two</h1>
+
+		<a href="/index.html">Home</a>
+
+		<p>Hint: search up XSS</p>
+		<p>the answer is the result of querying /two</p>
+
+		<form>
+			<input id="un" type="text" placeholder="username" />
+			<input id="pw" type="text" placeholder="password" />
+			<input type="button" onclick="run()" value="Submit">
+		</form>
+
+		results:
+		<div id="results"></div>
+		<script>
+			
+			function run() {
+				// store the data somewhere
+				var str = document.getElementById("un").value;
+				str += document.getElementById("pw").value;
+				document.getElementById("results").innerHTML = str;
+			}
+
+		</script>
+
+    </body>
+</html>
